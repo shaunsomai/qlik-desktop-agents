@@ -1,7 +1,7 @@
 {
   "name": "qlik-desktop-agents",
   "description": "Five subagents for Qlik Sense Desktop development \u2014 app inspection, load-script writing and review, front-end building, and local engine administration \u2014 plus a bundled stdlib-only MCP server that speaks the Qlik Engine JSON API to the local Desktop engine on localhost:4848. Reads and writes the load script, verifies the real loaded data model, reloads apps, and builds sheets and charts that actually render. Needs Qlik Sense Desktop running and Python 3.8+.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "author": {
     "name": "Shaun Somai"
   },
