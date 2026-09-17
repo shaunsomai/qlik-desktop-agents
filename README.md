@@ -1,10 +1,10 @@
 # qlik-desktop-agents
 
-Independent Claude Code plugin for Qlik desktop. Version 2.1.0.
+Independent Claude Code plugin for Qlik desktop. Version 2.1.1.
 
 ## Install
 
-    /plugin marketplace add shaunsomai/qlik-desktop-agents
+    /plugin marketplace add https://github.com/shaunsomai/qlik-desktop-agents.git --sparse .claude-plugin plugins
     /plugin install qlik-desktop-agents@qlik-desktop-agents-marketplace
 
 Private repository: collaborators need GitHub access and authenticated Git. Remove duplicate legacy installations first. Local testing: claude --plugin-dir ./plugins/qlik-desktop-agents

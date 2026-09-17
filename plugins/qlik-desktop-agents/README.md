@@ -71,7 +71,7 @@ One deliberate difference from the Cloud set: `qlik-script-reviewer` is locked d
 ## Install
 
 ```
-/plugin marketplace add shaunsomai/qlik-desktop-agents
+/plugin marketplace add https://github.com/shaunsomai/qlik-desktop-agents.git --sparse .claude-plugin plugins
 /plugin install qlik-desktop-agents@qlik-desktop-agents-marketplace
 ```
 
