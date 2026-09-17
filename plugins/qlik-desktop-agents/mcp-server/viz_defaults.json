@@ -1,0 +1,734 @@
+{
+  "barchart": {
+    "version": "2.2.0",
+    "barGrouping": {
+      "grouping": "grouped"
+    },
+    "color": {
+      "auto": true,
+      "autoMinMax": true,
+      "dimensionScheme": "12",
+      "expressionIsColor": true,
+      "expressionLabel": "",
+      "formatting": {
+        "numFormatFromTemplate": true
+      },
+      "measureScheme": "sg",
+      "mode": "primary",
+      "paletteColor": {
+        "index": 6
+      },
+      "persistent": false,
+      "reverseScheme": false,
+      "useBaseColors": "off",
+      "useDimColVal": true,
+      "useMeasureGradient": true
+    },
+    "components": [],
+    "dataPoint": {
+      "showLabels": false,
+      "showSegmentLabels": false,
+      "showTotalLabels": true
+    },
+    "dimensionAxis": {
+      "axisDisplayMode": "auto",
+      "continuousAuto": true,
+      "dock": "near",
+      "label": "auto",
+      "maxVisibleItems": 10,
+      "show": "all"
+    },
+    "gridLine": {
+      "auto": true,
+      "spacing": 2
+    },
+    "legend": {
+      "dock": "auto",
+      "show": true,
+      "showTitle": true
+    },
+    "measureAxis": {
+      "autoMinMax": true,
+      "dock": "near",
+      "max": 10,
+      "min": 0,
+      "minMax": "min",
+      "show": "all",
+      "spacing": 1
+    },
+    "orientation": "vertical",
+    "preferContinuousAxis": true,
+    "qHyperCubeDef": {
+      "qInitialDataFetch": [
+        {
+          "qWidth": 17,
+          "qHeight": 500
+        }
+      ],
+      "qSuppressMissing": true,
+      "qSuppressZero": false
+    },
+    "refLine": {
+      "refLines": [],
+      "dimRefLines": []
+    },
+    "scrollbar": "miniChart",
+    "scrollStartPos": 0,
+    "showDetails": true,
+    "showDisclaimer": true,
+    "showMiniChartForContinuousAxis": true,
+    "showTitles": true,
+    "tooltip": {
+      "auto": true,
+      "hideBasic": false,
+      "data": {}
+    }
+  },
+  "bulletchart": {
+    "version": "2.2.0",
+    "color": {
+      "auto": true,
+      "mode": "primary",
+      "bar": {
+        "index": 6
+      },
+      "target": {
+        "index": -1,
+        "color": "#000000"
+      }
+    },
+    "dataPoint": {
+      "showLabels": false,
+      "showSegmentLabels": false,
+      "showTotalLabels": true
+    },
+    "dimensionAxis": {
+      "dock": "near",
+      "label": "auto",
+      "show": "all"
+    },
+    "gridLine": {
+      "auto": true,
+      "spacing": 2
+    },
+    "measureAxis": {
+      "commonAxis": false,
+      "commonRange": false,
+      "dock": "near",
+      "show": "all",
+      "spacing": 1
+    },
+    "orientation": "vertical",
+    "qHyperCubeDef": {
+      "qInitialDataFetch": [
+        {
+          "qWidth": 15,
+          "qHeight": 500
+        }
+      ],
+      "qSuppressZero": false,
+      "qSuppressMissing": true
+    },
+    "scrollbar": "bar",
+    "scrollStartPos": 0,
+    "showDetails": true,
+    "showTitles": true,
+    "tooltip": {
+      "auto": true,
+      "hideBasic": false,
+      "title": "",
+      "description": ""
+    }
+  },
+  "combochart": {
+    "version": "1.38.0",
+    "qHyperCubeDef": {
+      "qAlwaysFullyExpanded": true,
+      "qInitialDataFetch": [
+        {
+          "qWidth": 17,
+          "qHeight": 500
+        }
+      ],
+      "qSuppressMissing": true,
+      "qSuppressZero": false
+    },
+    "showTitles": true,
+    "barGrouping": {
+      "grouping": "grouped"
+    },
+    "lineType": "line",
+    "stackedArea": false,
+    "separateStacking": true,
+    "orientation": "vertical",
+    "scrollStartPos": 0,
+    "nullMode": "gap",
+    "dataPoint": {
+      "show": false,
+      "showLineLabels": false,
+      "showBarLabels": false
+    },
+    "color": {
+      "auto": true,
+      "mode": "primary",
+      "useBaseColors": "off",
+      "paletteColor": {
+        "index": 6
+      },
+      "useDimColVal": true,
+      "useMeasureGradient": true,
+      "persistent": false,
+      "expressionIsColor": true,
+      "expressionLabel": "",
+      "measureScheme": "sg",
+      "reverseScheme": false,
+      "dimensionScheme": "12",
+      "autoMinMax": true,
+      "measureMin": 0,
+      "measureMax": 10
+    },
+    "legend": {
+      "dock": "auto",
+      "show": true,
+      "showTitle": true
+    },
+    "components": [],
+    "dimensionAxis": {
+      "axisDisplayMode": "auto",
+      "continuousAuto": true,
+      "dock": "near",
+      "label": "auto",
+      "maxVisibleItems": 10,
+      "show": "all"
+    },
+    "measureAxes": [
+      {
+        "show": "all",
+        "dock": "near",
+        "spacing": 1,
+        "autoMinMax": true,
+        "minMax": "min",
+        "min": 0,
+        "max": 10
+      },
+      {
+        "show": "all",
+        "dock": "far",
+        "spacing": 1,
+        "autoMinMax": true,
+        "minMax": "min",
+        "min": 0,
+        "max": 10
+      }
+    ],
+    "refLine": {
+      "refLines": [],
+      "refLines2": [],
+      "dimRefLines": []
+    },
+    "preferContinuousAxis": true,
+    "showMiniChartForContinuousAxis": true,
+    "tooltip": {
+      "auto": true,
+      "hideBasic": false,
+      "title": "",
+      "description": ""
+    }
+  },
+  "filterpane": {
+    "version": "1.2.0",
+    "showDetails": true,
+    "showTitles": false
+  },
+  "funnelchart": {
+    "version": "1.12.0",
+    "color": {
+      "auto": true,
+      "autoMinMax": true,
+      "dimensionScheme": "12",
+      "expressionIsColor": true,
+      "expressionLabel": "",
+      "measureScheme": "sg",
+      "mode": "primary",
+      "paletteColor": {
+        "index": 6
+      },
+      "persistent": false,
+      "reverseScheme": false,
+      "useBaseColors": "off",
+      "useDimColVal": true,
+      "useMeasureGradient": true
+    },
+    "dataPoint": {
+      "auto": true,
+      "labelMode": "share"
+    },
+    "funnel": {
+      "mode": "WIDTH"
+    },
+    "qHyperCubeDef": {
+      "qInitialDataFetch": [
+        {
+          "qWidth": 2,
+          "qHeight": 5000
+        }
+      ],
+      "qSuppressMissing": true,
+      "qSuppressZero": false
+    },
+    "showDimensionTitle": true,
+    "showTitles": true
+  },
+  "gauge": {
+    "qHyperCubeDef": {
+      "qInitialDataFetch": [
+        {
+          "qWidth": 1,
+          "qHeight": 1
+        }
+      ],
+      "qSuppressZero": false,
+      "qSuppressMissing": true
+    },
+    "showTitles": true,
+    "measureAxis": {
+      "min": 0,
+      "max": 100,
+      "show": "all",
+      "spacing": 1
+    },
+    "orientation": "horizontal",
+    "segmentInfo": {
+      "limits": [],
+      "paletteColors": [
+        {
+          "index": 6
+        }
+      ]
+    },
+    "refLine": {
+      "refLines": []
+    },
+    "showDetails": true,
+    "components": [],
+    "gaugetype": "radial",
+    "autoOrientation": true,
+    "useSegments": false,
+    "color": {
+      "useBaseColors": "measure"
+    },
+    "paletteProgressColor": {
+      "index": 6
+    }
+  },
+  "kpi": {
+    "version": "2.4.0",
+    "qHyperCubeDef": {
+      "qSuppressZero": false,
+      "qSuppressMissing": true,
+      "qInitialDataFetch": [
+        {
+          "qWidth": 500,
+          "qHeight": 10
+        }
+      ],
+      "qSuppressMeasureTotals": true
+    },
+    "showTitles": false,
+    "showDetails": true,
+    "showMeasureTitle": true,
+    "showSecondMeasureTitle": true,
+    "textAlign": "center",
+    "layoutBehavior": "relative",
+    "fontSize": "M",
+    "useLink": false,
+    "sheetLink": "",
+    "openUrlInNewTab": true,
+    "components": []
+  },
+  "linechart": {
+    "version": "2.2.0",
+    "color": {
+      "auto": true,
+      "autoMinMax": true,
+      "dimensionScheme": "12",
+      "expressionIsColor": true,
+      "expressionLabel": "",
+      "formatting": {
+        "numFormatFromTemplate": true
+      },
+      "measureScheme": "sg",
+      "mode": "primary",
+      "paletteColor": {
+        "index": 6
+      },
+      "persistent": false,
+      "reverseScheme": false,
+      "useBaseColors": "off",
+      "useDimColVal": true,
+      "useMeasureGradient": true
+    },
+    "components": [],
+    "dataPoint": {
+      "show": false,
+      "showLabels": false
+    },
+    "dimensionAxis": {
+      "axisDisplayMode": "auto",
+      "continuousAuto": true,
+      "dock": "near",
+      "label": "auto",
+      "maxVisibleItems": 10,
+      "show": "all"
+    },
+    "gridLine": {
+      "auto": true,
+      "spacing": 2
+    },
+    "legend": {
+      "dock": "auto",
+      "show": true,
+      "showTitle": true
+    },
+    "lineType": "line",
+    "measureAxis": {
+      "autoMinMax": true,
+      "dock": "near",
+      "logarithmic": false,
+      "max": 10,
+      "min": 0,
+      "minMax": "min",
+      "show": "all",
+      "spacing": 1
+    },
+    "orientation": "horizontal",
+    "preferContinuousAxis": true,
+    "qHyperCubeDef": {
+      "qAlwaysFullyExpanded": true,
+      "qInitialDataFetch": [
+        {
+          "qWidth": 17,
+          "qHeight": 500
+        }
+      ],
+      "qSuppressMissing": true,
+      "qSuppressZero": false,
+      "qDynamicScript": []
+    },
+    "refLine": {
+      "refLines": [],
+      "dimRefLines": []
+    },
+    "scrollbar": "miniChart",
+    "scrollStartPos": 0,
+    "separateStacking": true,
+    "showDetails": true,
+    "showDisclaimer": true,
+    "showMiniChartForContinuousAxis": true,
+    "stackedArea": false,
+    "nullMode": "gap",
+    "showTitles": true,
+    "tooltip": {
+      "auto": true,
+      "hideBasic": false,
+      "title": "",
+      "description": ""
+    }
+  },
+  "piechart": {
+    "version": "2.3.0",
+    "color": {
+      "auto": true,
+      "autoMinMax": true,
+      "dimensionScheme": "12",
+      "expressionIsColor": true,
+      "expressionLabel": "",
+      "formatting": {
+        "numFormatFromTemplate": true
+      },
+      "measureScheme": "sg",
+      "mode": "primary",
+      "paletteColor": {
+        "index": 6
+      },
+      "persistent": false,
+      "reverseScheme": false,
+      "useBaseColors": "off",
+      "useDimColVal": true,
+      "useMeasureGradient": true
+    },
+    "components": [
+      {
+        "key": "slices",
+        "style": {
+          "strokeWidth": "none",
+          "strokeColor": {
+            "index": -1
+          }
+        }
+      }
+    ],
+    "dataPoint": {
+      "auto": true,
+      "labelMode": "share",
+      "labelValueMode": "arc"
+    },
+    "donut": {
+      "showAsDonut": false
+    },
+    "legend": {
+      "dock": "auto",
+      "showTitle": true
+    },
+    "qHyperCubeDef": {
+      "qInitialDataFetch": [
+        {
+          "qWidth": 10,
+          "qHeight": 500
+        }
+      ],
+      "qSuppressMissing": true,
+      "qSuppressZero": false,
+      "qMode": "S"
+    },
+    "showDetails": true,
+    "showDisclaimer": true,
+    "showTitles": true,
+    "tooltip": {
+      "auto": true,
+      "hideBasic": false,
+      "data": {}
+    }
+  },
+  "pivot-table": {
+    "version": "7.17.2",
+    "qHyperCubeDef": {
+      "qAlwaysFullyExpanded": false,
+      "qMode": "P",
+      "qSuppressMissing": true,
+      "qSuppressZero": false,
+      "qShowTotalsAbove": true,
+      "qInitialDataFetch": [
+        {
+          "qTop": 0,
+          "qLeft": 0,
+          "qWidth": 50,
+          "qHeight": 50
+        }
+      ],
+      "qIndentMode": false
+    },
+    "showTitles": true,
+    "nullValueRepresentation": {
+      "text": "-"
+    },
+    "components": []
+  },
+  "sankeychart": {
+    "version": "1.13.0",
+    "link": {
+      "color": 3,
+      "colorBy": "custom",
+      "shadow": false
+    },
+    "node": {},
+    "qHyperCubeDef": {
+      "qInitialDataFetch": [
+        {
+          "qWidth": 6,
+          "qHeight": 1666
+        }
+      ],
+      "qSuppressMissing": true,
+      "qSuppressZero": false
+    },
+    "showTitles": true
+  },
+  "scatterplot": {
+    "version": "3.60.0",
+    "color": {
+      "auto": true,
+      "mode": "primary",
+      "formatting": {
+        "numFormatFromTemplate": true
+      },
+      "useBaseColors": "off",
+      "paletteColor": {
+        "index": 6
+      },
+      "useDimColVal": true,
+      "useMeasureGradient": true,
+      "persistent": false,
+      "expressionIsColor": true,
+      "expressionLabel": "",
+      "measureScheme": "sg",
+      "reverseScheme": false,
+      "dimensionScheme": "12",
+      "autoMinMax": true,
+      "measureMin": 0,
+      "measureMax": 10
+    },
+    "dataPoint": {
+      "bubbleSizes": 5,
+      "rangeBubbleSizes": [
+        2,
+        8
+      ],
+      "compressionResolution": 5
+    },
+    "disableNavMenu": false,
+    "labels": {
+      "mode": 1
+    },
+    "gridLine": {
+      "auto": true,
+      "spacing": 2
+    },
+    "legend": {
+      "dock": "auto",
+      "show": true,
+      "showTitle": true
+    },
+    "maxVisibleBubbles": 2500,
+    "navigation": false,
+    "qHyperCubeDef": {
+      "qSuppressMissing": true
+    },
+    "refLine": {
+      "refLinesX": [],
+      "refLinesY": []
+    },
+    "trendLines": [],
+    "showDetails": false,
+    "showDisclaimer": true,
+    "showTitles": true,
+    "tooltip": {
+      "auto": true,
+      "hideBasic": false,
+      "title": "",
+      "description": ""
+    },
+    "xAxis": {
+      "show": "all",
+      "dock": "near",
+      "spacing": 1,
+      "autoMinMax": true,
+      "minMax": "min",
+      "min": 0,
+      "max": 10
+    },
+    "yAxis": {
+      "show": "all",
+      "dock": "near",
+      "spacing": 1,
+      "autoMinMax": true,
+      "minMax": "min",
+      "min": 0,
+      "max": 10
+    },
+    "components": []
+  },
+  "table": {
+    "qHyperCubeDef": {
+      "qInitialDataFetch": [
+        {
+          "qWidth": 50,
+          "qHeight": 100
+        }
+      ]
+    },
+    "showTitles": true,
+    "enableChartExploration": false,
+    "totals": {
+      "show": true,
+      "position": "noTotals"
+    },
+    "usePagination": false,
+    "components": []
+  },
+  "text": {
+    "version": "1.6.2",
+    "showTitles": false,
+    "text": "",
+    "fontsUsed": [],
+    "components": [],
+    "qHyperCubeDef": {
+      "qSuppressZero": false,
+      "qSuppressMissing": true,
+      "qInitialDataFetch": [
+        {
+          "qWidth": 500,
+          "qHeight": 10
+        }
+      ]
+    },
+    "disableNavMenu": true,
+    "showDetails": true,
+    "images": []
+  },
+  "treemap": {
+    "version": "1.7.2",
+    "color": {
+      "auto": true,
+      "mode": "primary",
+      "formatting": {
+        "numFormatFromTemplate": true
+      },
+      "useBaseColors": "off",
+      "paletteColor": {
+        "index": 6
+      },
+      "useDimColVal": true,
+      "useMeasureGradient": true,
+      "persistent": false,
+      "expressionIsColor": true,
+      "expressionLabel": "",
+      "measureScheme": "sg",
+      "reverseScheme": false,
+      "dimensionScheme": "12",
+      "autoMinMax": true,
+      "measureMin": 0,
+      "measureMax": 10
+    },
+    "labels": {
+      "auto": true,
+      "headers": true,
+      "overlay": true,
+      "leaves": true,
+      "values": false
+    },
+    "legend": {
+      "dock": "auto",
+      "show": false,
+      "showTitle": true
+    },
+    "qHyperCubeDef": {
+      "qMode": "K",
+      "qNoOfLeftDims": -1,
+      "qSortbyYValue": -1,
+      "qIndentMode": true,
+      "qShowTotalsAbove": true,
+      "qMaxStackedCells": 3000,
+      "qAlwaysFullyExpanded": true,
+      "qInitialDataFetch": [
+        {
+          "qTop": 0,
+          "qHeight": 3000,
+          "qLeft": 0,
+          "qWidth": 30
+        }
+      ],
+      "qSuppressZero": false,
+      "qSuppressMissing": true
+    },
+    "showDetails": true,
+    "showDisclaimer": true,
+    "showTitles": true,
+    "tooltip": {
+      "auto": true,
+      "hideBasic": false,
+      "title": "",
+      "description": ""
+    }
+  }
+}
