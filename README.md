@@ -1,6 +1,6 @@
 # qlik-desktop-agents
 
-Independent Claude Code plugin for Qlik desktop. Version 2.1.2.
+Independent Claude Code plugin for Qlik desktop. Version 2.1.3.
 
 ## Install
 

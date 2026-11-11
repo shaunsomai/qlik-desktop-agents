@@ -244,6 +244,30 @@ def _lib_or_inline_measure(item):
     return {"qDef": definition}
 
 
+def _shape_sn_table(props, object_id):
+    """Give a table the shape the client writes for one it builds itself:
+    every column carries a cId, auto width/alignment and attribute lists, and
+    qLayoutExclude.allColumnOrder maps cId -> position. No "type" key."""
+    props.pop("type", None)
+    cube = props["qHyperCubeDef"]
+    columns = cube["qDimensions"] + cube["qMeasures"]
+    order = {}
+    for i, col in enumerate(columns):
+        cid = "{0}_c{1}".format(object_id[:8], i)
+        order[cid] = i
+        col.setdefault("qAttributeExpressions", [])
+        col.setdefault("qAttributeDimensions", [])
+        qdef = col.setdefault("qDef", {})
+        qdef.update({"cId": cid, "autoSort": True,
+                     "textAlign": {"auto": True, "align": "left"},
+                     "columnWidth": {"type": "auto", "pixels": "200", "percentage": "20"},
+                     "representation": {"type": "text"}})
+    cube["qColumnOrder"] = list(range(len(columns)))
+    cube["qInterColumnSortOrder"] = list(range(len(columns)))
+    cube["qLayoutExclude"] = {"allColumnOrder": order}
+    return props
+
+
 def _number_format(fmt):
     if not fmt:
         return None
@@ -1170,7 +1194,7 @@ def t_create_sheet(args):
       "Dimensions and measures may be inline or reference master items by id.",
       {"app": APP_ARG, "sheet": {"type": "string"},
        "type": {"type": "string",
-                "description": "barchart, linechart, combochart, kpi, table, pivot-table, "
+                "description": "barchart, linechart, combochart, kpi, sn-table (\"table\" is accepted and created as sn-table), pivot-table, "
                                "scatterplot, piechart, treemap, gauge, distributionplot."},
        "title": {"type": "string"},
        "dimensions": {"type": "array", "items": {"type": "object"},
@@ -1187,6 +1211,10 @@ def t_add_chart(args):
         sheet_handle = s.object_handle(handle, sheet_id)
         object_id = uuid.uuid4().hex
         chart_type = args["type"]
+        # The current client's table is "sn-table"; the legacy "table" type
+        # renders blank in Qlik Cloud. Accept either name, always emit sn-table.
+        if chart_type == "table":
+            chart_type = "sn-table"
         props = {
             "qInfo": {"qId": object_id, "qType": chart_type},
             "type": chart_type,
@@ -1203,6 +1231,8 @@ def t_add_chart(args):
                 "qInitialDataFetch": [{"qTop": 0, "qLeft": 0, "qHeight": 20, "qWidth": 10}],
             },
         }
+        if chart_type == "sn-table":
+            _shape_sn_table(props, object_id)
         _apply_viz_defaults(props, chart_type)
         s.rpc("CreateChild", sheet_handle, [props])
         _add_cell(s, handle, sheet_handle, object_id, chart_type,
