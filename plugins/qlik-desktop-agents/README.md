@@ -86,6 +86,7 @@ Both are handled by the tooling now; they are recorded because they cost real de
 1. the sheet cell needs `bounds` (percentages of the 24×12 grid), or the object has no position and never appears;
 2. the object needs the property set its nebula bundle declares — a bar chart with no `dimensionAxis`/`measureAxis` has nothing to lay out;
 3. `qHyperCubeDef.qMode` must match the type — `"S"` for most, `"P"` for pivot tables, `"K"` for treemaps.
+4. a table is `sn-table` — in `qInfo.qType`, `visualization` and the sheet cell's `type` — with a `version`, a `cId` on every column and `qHyperCubeDef.qLayoutExclude.allColumnOrder` mapping them. The legacy `table` type evaluates fine and renders **blank** in Qlik Cloud. `qlik_add_chart` accepts `table` and creates `sn-table`.
 
 **Mapping tables are never dropped explicitly.** `DROP TABLE` on a `MAPPING LOAD` table cannot resolve — the table is not in the data model — and the reload aborts with `Request Aborted` and no line number. Qlik discards them itself at script end. The reviewer treats an explicit drop as Critical.
 

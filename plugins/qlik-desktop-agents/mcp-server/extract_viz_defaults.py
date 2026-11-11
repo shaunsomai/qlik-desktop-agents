@@ -37,7 +37,9 @@ BUNDLES = {
     "scatterplot": "sn-scatter-plot",
     "treemap": "sn-treemap",
     "kpi": "sn-kpi",
-    "table": "sn-table",
+    # Tables are "sn-table" in qType, visualization and the sheet cell. The legacy
+    # "table" type renders blank in Qlik Cloud, so never emit it.
+    "sn-table": "sn-table",
     "pivot-table": "sn-pivot-table",
     "gauge": "sn-gauge",
     "filterpane": "sn-filter-pane",
@@ -148,7 +150,7 @@ def bundle_source(root, name):
     for version in sorted(os.listdir(base), reverse=True):
         path = os.path.join(base, version, "dist", name + ".js")
         if os.path.isfile(path):
-            return io.open(path, encoding="utf-8", errors="replace").read()
+            return io.open(path, encoding="utf-8", errors="replace").read(), version
     return None
 
 
@@ -159,14 +161,19 @@ def main():
 
     out = {}
     for viz, bundle in sorted(BUNDLES.items()):
-        src = bundle_source(root, bundle)
-        if src is None:
+        found = bundle_source(root, bundle)
+        if found is None:
             print("  {0:18s} bundle not installed".format(viz))
             continue
+        src, bundle_version = found
         props = extract(src)
         if not props:
             print("  {0:18s} no property definition found".format(viz))
             continue
+        # Some bundles (sn-table) declare no "version" in their initial
+        # properties; the client stamps the package version on creation.
+        if "version" not in props and re.match(r"^\d+\.\d+\.\d+", bundle_version):
+            props["version"] = bundle_version
         out[viz] = props
         print("  {0:18s} {1:2} keys".format(viz, len(props)))
 

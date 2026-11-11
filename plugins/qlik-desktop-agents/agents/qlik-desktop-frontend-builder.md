@@ -100,7 +100,7 @@ The Cloud builder has to describe layout as a follow-up because its tools cannot
 | Part-of-whole with ≤ 3 parts? | `piechart` | Never more than 3 slices. |
 | Relationship between two measures? | `scatterplot` | 1 dimension, 2 measures. |
 | Hierarchy or share by size? | `treemap` | Prefer bar for < 8 items. |
-| Exact values / export? | `table` or `pivot-table` | Detail at the bottom, never the top row. |
+| Exact values / export? | `sn-table` or `pivot-table` | Detail at the bottom, never the top row. `table` is accepted but is created as `sn-table`: the legacy `table` type renders blank in Qlik Cloud, so an app built here would break when uploaded. |
 | Single value against a target? | `gauge` | One measure. Use sparingly — a KPI usually reads better. |
 
 `kpi`, `barchart` and `filterpane` are verified working through these tools. Other types use the identical property shape and should work, but confirm with `qlik_get_chart_info` and `qlik_get_chart_data` after creating one, and report it honestly if the object comes back empty. No 3D, no meaning carried by colour alone.
